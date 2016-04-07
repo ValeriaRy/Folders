@@ -1,3 +1,5 @@
+"use strict"
+
 (function() {
     var path = "";
     var ROOT_FOLDER = "node_modules";
