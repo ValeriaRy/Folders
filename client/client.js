@@ -65,16 +65,18 @@
     }
     
     returnButton.addEventListener("click", function() {
-        if ((list.firstChild !== ROOT_FOLDER) && (list.childNodes.length !== 1)) {
+        console.log(path);
+        if (((list.firstChild !== ROOT_FOLDER) && (list.childNodes.length !== 2))
+        && (path !== "")){
             var positionFolder = path.lastIndexOf("/" + parentFolder.innerHTML);
             var str = path.substring(0, positionFolder);
             var positionSymbol = str.lastIndexOf("\/");
             path = str.substring(0, positionSymbol);
             goToFolder(str.substring(positionSymbol + 1));
-        } else if (parentFolder.innerHTML !== "") {
+        } else {
             openFolder("", [ROOT_FOLDER]);
             path = "";
-        }
+        } 
     });
     
 })();
