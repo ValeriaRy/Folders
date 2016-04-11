@@ -65,7 +65,6 @@
     }
     
     returnButton.addEventListener("click", function() {
-        console.log(path);
         if (((list.firstChild !== ROOT_FOLDER) && (list.childNodes.length !== 2))
         && (path !== "")){
             var positionFolder = path.lastIndexOf("/" + parentFolder.innerHTML);
