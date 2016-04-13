@@ -40,7 +40,7 @@ body {
 
 .list {
     width: 354px;
-    height: 350px;
+    height: 432px;
     border: 2px solid black;
     overflow: auto;
     border-top: 0;
@@ -66,7 +66,74 @@ body {
 }
 
 .information span {
-    font-size: 20px;
+    font-size: 24px;
     padding-left: 5px;
     color: red;
+}
+
+.files {
+    float: left;
+}
+
+.close_comments {
+    border: 2px solid black;
+    width: 354px;
+    height: 500px;
+    margin-left: 530px;
+    visibility: hidden;
+}
+
+.comments {
+    border: 2px solid black;
+    width: 354px;
+    height: 500px;
+    margin-left: 530px;
+    visibility: visible;
+}
+
+.comments .header_comments {
+    height: 36px;
+    width: 340px;
+    font-size: 30px;
+    border-left: 0;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-bottom: 3px;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.comments .texts_all_comments {
+    width: 354px;
+    height: 345px;
+    border-bottom: 2px solid black;
+    overflow: auto;
+    border-top: 0;
+}
+
+.comments .texts_all_comments div {
+    font-size: 20px;
+}
+
+.comments .texts_all_comments div span {
+    display: block;
+}
+
+.comments textarea {
+    width: 348px;
+    height: 70px;
+    overflow: auto;
+    border-top: 0;
+    font-size: 20px;
+    margin-bottom: 0;
+    resize: none;
+}
+
+.comments button {
+    width: 354px;
+    height: 32px;
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 20px;
+    border-top: 2px solid black;
 }

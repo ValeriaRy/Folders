@@ -7,15 +7,25 @@
     <link rel="stylesheet" href="client/css/style.css" type="text/css" />
   </head>
   <body>
-    <div class="button"><button id="returnButton"></button></div>
-    <div class="parentFolder"><span id="parentFolder"></span></div>
-    <div class="list">
-      <ul id="list">
-        <li>node_modules</li>
-      </ul>
+    <div class="files">
+      <div class="button"><button id="returnButton"></button></div>
+      <div class="parentFolder"><span id="parentFolder"></span></div>
+      <div class="list">
+        <ul id="list">
+          <li>node_modules</li>
+        </ul>
+      </div>
+      <div class="information"><span id="information"></span></div>
     </div>
-    <div class="information"><span id="information"></span></div>
+    <div id="commentsPanel" class="close_comments">
+      <div class="header_comments"><span>You can write a comment</span></div>
+      <div id="comments" class="texts_all_comments">
+      </div>
+      <textarea id="userComment" placeholder="write a comment" maxlength="93"></textarea>
+      <button id="sendComment">Send</button>
+    </div>
     
     <script src="client/client.js"></script>
+    <script src="client/comments.js"></script>
   </body>
 </html>

@@ -1,6 +1,8 @@
 "use strict";
 
-(function() {
+var treeModule = (function() {
+    "use strict";
+    
     var path = "";
     var ROOT_FOLDER = "node_modules";
 
@@ -8,10 +10,11 @@
         path = path + "/" + folder;
         var xhr = new XMLHttpRequest();
         var params = 'name=' + encodeURIComponent(path);
-        var url = "https://node-tree-valeriary.c9users.io/hello?" + params;
+        var url = "https://node-tree-valeriary.c9users.io/files?" + params;
         xhr.onreadystatechange = function(){
             if (xhr.readyState === 4) {
                 determineItem(folder, xhr.responseText);
+                commentModule.showComments();
             } 
         };
         xhr.open("GET", url, true);
@@ -39,7 +42,7 @@
     
     function openFolder(thisParent, folder) {
         var array;
-        removeChildren(list);
+        treeModule.removeChildren(list);
         if (typeof(folder) === "string") {
             array = JSON.parse(folder);
         } else {
@@ -47,6 +50,7 @@
         }
         buildListFolder(array);
         parentFolder.innerHTML = thisParent;
+        commentModule.setPath(path);
     }
     
     function buildListFolder (arr) {
@@ -57,16 +61,9 @@
         }
     }
     
-    function removeChildren(node) {
-        var children = node.childNodes;
-        while(children.length) {
-            node.removeChild(children[0]);
-        }
-    }
-    
     returnButton.addEventListener("click", function() {
-        console.log(path);
-        if (((list.firstChild !== ROOT_FOLDER) && (list.childNodes.length !== 2))
+        var NUMBER_NODE_MODULES = 2;
+        if (((list.firstChild !== ROOT_FOLDER) && (list.childNodes.length !== NUMBER_NODE_MODULES))
         && (path !== "")){
             var positionFolder = path.lastIndexOf("/" + parentFolder.innerHTML);
             var str = path.substring(0, positionFolder);
@@ -76,7 +73,17 @@
         } else {
             openFolder("", [ROOT_FOLDER]);
             path = "";
+            commentsPanel.setAttribute("class", "close_comments");
         } 
     });
     
-})();
+    return {
+        removeChildren: function(node) {
+        var children = node.childNodes;
+        while(children.length) {
+            node.removeChild(children[0]);
+        }
+    }
+        
+    };
+}());
