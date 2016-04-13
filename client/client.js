@@ -1,5 +1,3 @@
-"use strict";
-
 var treeModule = (function() {
     "use strict";
     
@@ -62,12 +60,8 @@ var treeModule = (function() {
     }
     
     returnButton.addEventListener("click", function() {
-<<<<<<< HEAD
         var NUMBER_NODE_MODULES = 2;
         if (((list.firstChild !== ROOT_FOLDER) && (list.childNodes.length !== NUMBER_NODE_MODULES))
-=======
-        if (((list.firstChild !== ROOT_FOLDER) && (list.childNodes.length !== 2))
->>>>>>> origin/gh-pages
         && (path !== "")){
             var positionFolder = path.lastIndexOf("/" + parentFolder.innerHTML);
             var str = path.substring(0, positionFolder);
