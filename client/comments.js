@@ -46,7 +46,7 @@ var commentModule = (function() {
     
     function buildComments(array) {
         treeModule.removeChildren(comments);
-        for (var i = array.length - 1; i > 0; i--) {
+        for (var i = array.length - 1; i >= 0; i--) {
             var obj = array[i];
             var comm = document.createElement("div");
             var timeComm = document.createElement("span");
