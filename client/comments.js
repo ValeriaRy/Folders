@@ -65,12 +65,11 @@ var commentModule = (function() {
             var panel = document.getElementById("commentsPanel");
             if (parentFolder.innerHTML) {
                 panel.setAttribute("class", "comments");
-                userComment.value = "";
                 getComments();
             } else {
                 panel.setAttribute("class", "close_comments");
-                userComment.value = "";
             }
+            userComment.value = "";
         }
 
     };
