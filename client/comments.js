@@ -9,11 +9,6 @@ var commentModule = (function() {
         commentModule.showComments();
     }
     
-    function sendRecall() {
-        
-        commentModule.showComments(parentFolder.innerHTML);
-    }
-    
     function sendCommentToServer(comment) {
         if (comment) {
             var xhr = new XMLHttpRequest();
@@ -75,7 +70,6 @@ var commentModule = (function() {
             } else {
                 panel.setAttribute("class", "close_comments");
                 userComment.value = "";
-                
             }
         }
 
