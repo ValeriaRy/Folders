@@ -1,0 +1,139 @@
+#delete {
+    margin-top: 50px;
+}
+
+body {
+    margin-top: 20px;
+}
+
+.button {
+    float: left;
+    margin-left: 150px;
+}
+
+.button button {
+    height: 39px;
+    width: 54px;
+    background-image: url(../img/return.jpg);
+    background-size: contain;
+    border: 2px solid black;
+}
+
+.button button:hover {
+    border: 2px solid #3366ff;
+}
+
+.parentFolder {
+    width: 354px;
+    border: 2px solid black;
+    margin-left: 150px;
+}
+
+.parentFolder span {
+    height: 36px;
+    font-size: 30px;
+    border-left: 0;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-bottom: 3px;
+}
+
+.list {
+    width: 354px;
+    height: 432px;
+    border: 2px solid black;
+    overflow: auto;
+    border-top: 0;
+    margin-left: 150px;
+}
+
+.list ul li {
+    list-style-type: disc;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.list ul li:hover {
+    background-color: #e6ecff;
+    cursor: default;
+}
+
+.information {
+    width: 354px;
+    border: 2px solid black;
+    border-top: 0;
+    margin-left: 150px;
+}
+
+.information span {
+    font-size: 24px;
+    padding-left: 5px;
+    color: red;
+}
+
+.files {
+    float: left;
+}
+
+.close_comments {
+    border: 2px solid black;
+    width: 354px;
+    height: 500px;
+    margin-left: 530px;
+    visibility: hidden;
+}
+
+.comments {
+    border: 2px solid black;
+    width: 354px;
+    height: 500px;
+    margin-left: 530px;
+    visibility: visible;
+}
+
+.comments .header_comments {
+    height: 36px;
+    width: 340px;
+    font-size: 30px;
+    border-left: 0;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-bottom: 3px;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.comments .texts_all_comments {
+    width: 354px;
+    height: 345px;
+    border-bottom: 2px solid black;
+    overflow: auto;
+    border-top: 0;
+}
+
+.comments .texts_all_comments div {
+    font-size: 20px;
+}
+
+.comments .texts_all_comments div span {
+    display: block;
+}
+
+.comments textarea {
+    width: 348px;
+    height: 70px;
+    overflow: auto;
+    border-top: 0;
+    font-size: 20px;
+    margin-bottom: 0;
+    resize: none;
+}
+
+.comments button {
+    width: 354px;
+    height: 32px;
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 20px;
+    border-top: 2px solid black;
+}
